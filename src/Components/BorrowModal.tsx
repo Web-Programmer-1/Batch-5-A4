@@ -43,11 +43,18 @@ const BorrowModal = ({ isOpen, onClose, book }: BorrowModalProps) => {
       return;
     }
 
+    // const payload = {
+    //   bookId: book._id,
+    //   quantity: quantityNumber,
+    //   dueDate,
+    // };
+
     const payload = {
-      bookId: book._id,
-      quantity: quantityNumber,
-      dueDate,
-    };
+  book: book._id, // backend expects 'book'
+  quantity: quantityNumber,
+  dueDate,
+};
+
 
     try {
       await borrowBook(payload).unwrap();

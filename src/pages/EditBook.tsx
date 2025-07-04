@@ -2,7 +2,7 @@
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { data, useNavigate, useParams } from 'react-router-dom';
+import {  useNavigate, useParams } from 'react-router-dom';
 import { useGetBookQuery, useUpdateBookMutation } from '@/Redux/Api/baseApi';
 import React from 'react';
 import Swal from 'sweetalert2';

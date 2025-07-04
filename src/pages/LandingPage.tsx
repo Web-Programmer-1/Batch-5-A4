@@ -15,7 +15,7 @@ export default function HeroSection() {
         <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
           <div className="text-white text-center md:text-left max-w-xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Welcome to Your Library
+              Welcome to Book libary Management systerm
             </h1>
             <p className="text-lg md:text-xl mb-6">
               Explore, read and manage your books effortlessly. Your digital

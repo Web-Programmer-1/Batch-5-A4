@@ -2,7 +2,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 interface BorrowPayload {
-  bookId: string;
+  book: string;
   quantity: number;
   dueDate: string;
 }
