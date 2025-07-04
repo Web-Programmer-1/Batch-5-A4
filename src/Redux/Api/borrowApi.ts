@@ -15,7 +15,7 @@ interface BorrowSummary {
 
 export const borrowApi = createApi({
   reducerPath: 'borrowApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:4000/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://libary-a4-backend.vercel.app' }),
   tagTypes: ['borrow', 'book'],
   endpoints: (builder) => ({
     // Borrow Book POST

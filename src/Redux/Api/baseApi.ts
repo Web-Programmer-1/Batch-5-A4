@@ -9,7 +9,7 @@ type CreateBookDto = Omit<IBook, "_id" | "createdAt" | "updatedAt">;
 
  export const bookApi = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:4000" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://libary-a4-backend.vercel.app" }),
   tagTypes: ["book", "borrow"],
   endpoints: (builder) => ({
 
