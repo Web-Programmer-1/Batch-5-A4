@@ -1,69 +1,62 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---------------------------- Libary management projects ---------------------------------
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ What Technologies Were Used:
+This project was built using modern and scalable web technologies to ensure smooth performance, type safety, and maintainability. On the frontend, React was used for building reusable components, while TypeScript provided strong typing, making the codebase more predictable and less error-prone. For efficient API interaction and state management, Redux Toolkit Query (RTK Query) was implemented. It simplifies data fetching, caching, and auto-refetching with minimal boilerplate.
 
-## Expanding the ESLint configuration
+To design a clean, responsive user interface, Tailwind CSS was chosen, allowing fast and consistent styling across the application. On the backend, Node.js and Express.js were used to handle RESTful APIs, with MongoDB as the database and Mongoose for defining schemas and interacting with collections.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+ Benefits of the Project Structure
+This tech stack offers multiple benefits:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Component Reusability: React components ensure modular and scalable frontend development.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Type Safety: TypeScript helps avoid runtime errors by catching issues at compile time.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Automatic State Management: RTK Query handles API state (loading, error, success) without needing manual reducers or actions.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Clean UI/UX: Tailwind CSS enables quick prototyping and ensures responsive design across devices.
+
+Backend Modularity: The use of the MVC pattern (Models, Routes, Controllers) in Express improves backend code organization and readability.
+
+Database Flexibility: MongoDB with Mongoose allows flexible schema designs and powerful querying capabilities, including aggregation.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+ What Functionalities Were Implemented
+The system includes essential functionalities for managing a small library. It allows users to:
+
+View a list of all books in a structured table with important columns like Title, Author, Genre, ISBN, Copies, Availability, and Actions.
+
+Add new books via a dedicated form with input validation.
+
+Edit existing books, where the form is pre-filled with current data.
+
+Delete books with confirmation dialogs.
+
+Borrow books using a simple form that takes quantity and due date.
+
+View a Borrow Summary page showing aggregated borrowing data, such as total copies borrowed per book.
+
+The application also includes several core business logics, such as:
+
+A book becomes unavailable if its available copies reach zero.
+
+The borrow form prevents borrowing more copies than are available.
+
+After borrowing, the user is redirected to the borrow summary page with a success notification.
+
+The UI is designed to be fully responsive and user-friendly. Buttons and actions are clearly labeled, and toast notifications give feedback on user interactions. Bonus features like optimistic UI updates, form validation, and aggregation-based reporting add extra depth to the project.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Live Link: https://batch-5-a4-76k1.vercel.app
+server code Link: https://github.com/Web-Programmer-1/batch-5-A4-backend-code.git
+
+
